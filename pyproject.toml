@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "calvd"
-version = "0.1"
-description = "Conversion of resistance values to temperatures for RTDs by Callendar van Dusen equation"
+version = "1.0"
+description = "Conversion of resistance values to temperatures for platinum resistors such as RTDs"
 readme = "README.rst"
 license = {file = "LICENSE"}
 authors = [
