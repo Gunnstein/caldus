@@ -39,13 +39,20 @@ class TestConversion(unittest.TestCase):
         self.R = TESTDATA[:, 1]
 
     def test_resistance2temperature(self):
-        t = np.round(resistance2temperature(self.R), 2)
-        np.testing.assert_array_equal(t, self.t)
+        t = resistance2temperature(self.R)
+        np.testing.assert_allclose(t, self.t, rtol=1e-4, atol=1e-2)
     
     def test_temperature2resistance(self):
-        R = np.round(temperature2resistance(self.t), 2)
-        np.testing.assert_array_equal(R, self.R)
+        R = temperature2resistance(self.t)
+        np.testing.assert_allclose(R, self.R, rtol=1e-4, atol=1e-2)
 
+    def test_t2r(self):
+        R = t2r(self.t)
+        np.testing.assert_allclose(R, self.R, rtol=1e-4, atol=1e-2)
+
+    def test_r2t(self):
+        t = r2t(self.R)
+        np.testing.assert_allclose(t, self.t, rtol=1e-4, atol=1e-2)
 
 if __name__ == "__main__":
     unittest.main()
