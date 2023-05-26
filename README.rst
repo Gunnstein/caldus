@@ -1,7 +1,5 @@
 # calvd: Platinum Resistor Conversion Python Package
 
-.. contents:: :local:
-
 ## Introduction
 
 `calvd` is a user-friendly, robust Python package specifically designed to facilitate the conversion between resistance 
@@ -48,8 +46,8 @@ Below is a simple usage example:
     # Convert temperature to resistance
     res = calvd.temperature2resistance(25)
     
-    # alternatively you can use the wrapper functions `r2t` and `t2r` to achive the same.
-    res = calvd.r2t(100)
+    # alternatively you can use the wrapper functions `r2t` and `t2r` to achieve the same.
+    res = calvd.r2t(110)
     temp = calvd.t2r(25)
 
     print(temp) # output: ~25.68

@@ -10,11 +10,14 @@ import numpy as np
 
 __all__ = ["temperature2resistance", "resistance2temperature", "r2t", "t2r"]
 
+
 def _cvd_pos(t, R0, A, B):
     return R0*(1+A*t+B*t**2)
 
+
 def _cvd_neg(t, R0, A, B, C):
     return R0*(1+A*t+B*t**2+C*(t-100)*t**3)
+
 
 def temperature2resistance(t, R0=100., A=3.9083e-3, B=-5.775e-7, C=-4.183e-12):
     """Convert temperature to resistance for platinum resistors.
@@ -38,18 +41,22 @@ def temperature2resistance(t, R0=100., A=3.9083e-3, B=-5.775e-7, C=-4.183e-12):
     Raises
     ------
     ValueError
-        If the temperature is out of bounds for the defined equation.
+        If the temperature is out of bounds, i.e (T<-200C) or (T>850C) equation.
     """
     if np.any(t<-200) or np.any(t>850):
         raise ValueError(
             "Resistance only defined for temperatures between -200C and 850C.")
-    return np.piecewise(t, 
-                        [t<0, t>=0],
-                        [
-                            lambda x: _cvd_neg(x, R0, A, B, C), 
-                            lambda x: _cvd_pos(x, R0, A, B)
-                        ],
-                       )
+    R = np.piecewise(t, 
+                    [t<0, t>=0],
+                    [
+                        lambda x: _cvd_neg(x, R0, A, B, C), 
+                        lambda x: _cvd_pos(x, R0, A, B)
+                    ],
+                    )
+    if R.size == 1:
+        R = float(R)
+    return R
+
 
 def resistance2temperature(R, R0=100., A=3.9083e-3, B=-5.775e-7, C=-4.183e-12, precision=3):
     """Convert resistance to temperature for platinum resistors.
