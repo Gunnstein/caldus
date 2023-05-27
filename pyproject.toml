@@ -3,8 +3,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "calvd"
-version = "1.1"
+name = "caldus"
+version = "1.2"
 description = "Conversion of resistance values to temperatures for platinum resistors such as RTDs"
 readme = "README.rst"
 license = {file = "LICENSE"}
@@ -25,4 +25,4 @@ dependencies = [
 repository = "https://github.com/gunnstein/calvd"
 
 [tool.setuptools]
-packages = ["calvd"]
+packages = ["caldus"]

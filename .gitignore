@@ -1,0 +1,7 @@
+*
+!.gitignore
+!pyproject.toml
+!README.rst
+!LICENSE
+!caldus/
+!caldus/*.py
