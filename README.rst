@@ -6,9 +6,6 @@
 values and temperatures of platinum resistors. It is based on the Callender-Van Dusen equations (thus the name `calvd`),
 and the IEC 60751:2022 standard.
 
-It caters to a wide array of platinum resistors including PT100, PT500, PT1000, and others, making it a critical tool 
-for engineers, technicians, scientists and anyone who deals with temperature measurement, temperature controls and 
-related research.
 
 ## Key Features
 
