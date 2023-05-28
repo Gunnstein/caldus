@@ -1,3 +1,6 @@
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
 caldus: Platinum Resistor Conversion Python Package
 ===================================================
 
@@ -50,12 +53,16 @@ Below is a simple usage example:
     # Convert temperature to resistance
     res = caldus.temperature2resistance(25)
     
-    # alternatively you can use the wrapper functions `r2t` and `t2r` to achieve the same.
+    # Alternatively you can use the wrapper functions `r2t` and `t2r` to achieve the same.
     res = caldus.r2t(110)
     temp = caldus.t2r(25)
 
     print(temp) # output: ~25.68
     print(res)  # output: ~109
+
+    # All functions can also take array like objects
+    temps = [0., 12., 21.]
+    resistances = caldus.t2r(temps)
 
 
 Support and Contribution
