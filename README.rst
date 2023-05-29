@@ -10,7 +10,7 @@ Introduction
 
 `caldus` is a user-friendly, robust Python package specifically designed to facilitate the
 conversion between resistance values and temperatures of platinum resistors. It is based on the IEC 60751:2022 standard, i.e. the
-Callender-Van Dusen equations (thus the name `caldus`).
+Callendar-Van Dusen equations (thus the name `caldus`).
 
 
 Key Features
