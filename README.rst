@@ -1,15 +1,16 @@
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
     :target: https://github.com/psf/black
 
-caldus: Platinum Resistor Conversion Python Package
-===================================================
+caldus:
+=======
+
 
 Introduction
 ------------
 
-`caldus` is a user-friendly, robust Python package specifically designed to facilitate the 
-conversion between resistance values and temperatures of platinum resistors. It is based on the 
-Callender-Van Dusen equations (thus the name `caldus`) and the IEC 60751:2022 standard.
+`caldus` is a user-friendly, robust Python package specifically designed to facilitate the
+conversion between resistance values and temperatures of platinum resistors. It is based on the IEC 60751:2022 standard, i.e. the
+Callender-Van Dusen equations (thus the name `caldus`).
 
 
 Key Features
@@ -52,15 +53,15 @@ Below is a simple usage example:
 
     # Convert temperature to resistance
     res = caldus.temperature2resistance(25)
-    
+
     # Alternatively you can use the wrapper functions `r2t` and `t2r` to achieve the same.
     res = caldus.r2t(110)
     temp = caldus.t2r(25)
 
-    print(temp) # output: ~25.68
-    print(res)  # output: ~109
+    print(temp) # output: ~25.684
+    print(res)  # output: ~109.735
 
-    # All functions can also take array like objects
+    # All functions can also ta22ke array like objects
     temps = [0., 12., 21.]
     resistances = caldus.t2r(temps)
 
@@ -68,8 +69,6 @@ Below is a simple usage example:
 Support and Contribution
 ------------------------
 
-Please report issues via the GitHub issue tracker. 
+Please report issues via the GitHub issue tracker.
 
 To contribute, please fork this repository, make your changes, and issue a pull request.
-
-
