@@ -61,7 +61,7 @@ Below is a simple usage example:
     print(temp) # output: ~25.684
     print(res)  # output: ~109.735
 
-    # All functions can also ta22ke array like objects
+    # All functions can also take array like objects
     temps = [0., 12., 21.]
     resistances = caldus.t2r(temps)
 
