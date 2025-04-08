@@ -1,6 +1,7 @@
 *
 !.gitignore
 !pyproject.toml
+!tox.ini
 !README.rst
 !LICENSE
 !caldus/

@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.urls]
-repository = "https://github.com/gunnstein/calvd"
+repository = "https://github.com/gunnstein/caldus"
 
 [tool.setuptools]
 packages = ["caldus"]
