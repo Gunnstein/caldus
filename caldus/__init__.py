@@ -44,7 +44,7 @@ def temperature2resistance(t, R0=100., A=3.9083e-3, B=-5.775e-7, C=-4.183e-12):
     ValueError
         If the temperature is out of bounds, i.e (T<-200C) or (T>850C) equation.
     """
-    t = np.asfarray(t)
+    t = np.asarray(t, dtype=float)
     if np.any(t<-200) or np.any(t>850):
         raise ValueError(
             "Resistance only defined for temperatures between -200C and 850C.")
@@ -159,7 +159,7 @@ def resistance2temperature(R, R0=100., A=3.9083e-3, B=-5.775e-7, C=-4.183e-12):
     ValueError
         If the temperature is out of bounds, i.e (t<-200C) or (t>850C) equation.
     """
-    R = np.asfarray(R)
+    R = np.asarray(R, dtype=float)
     if np.any(R<_cvd_neg(-200, R0, A, B, C)) or np.any(R>_cvd_pos(850, R0, A, B)):
         raise ValueError(
             "Resistance only defined for temperatures between -200C and 850C.")

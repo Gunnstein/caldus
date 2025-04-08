@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "caldus"
-version = "1.2"
+version = "1.3"
 description = "Conversion of resistance values to temperatures for platinum resistors such as RTDs"
 readme = "README.rst"
 license = {file = "LICENSE"}
